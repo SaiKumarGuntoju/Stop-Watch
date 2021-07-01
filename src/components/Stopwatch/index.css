@@ -1,0 +1,94 @@
+.app-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/stopwatch-sm-bg.png');
+  background-size: cover;
+  height: 100vh;
+}
+@media screen and (min-width: 768px) {
+  .app-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/stopwatch-lg-bg.png');
+  }
+}
+.stopwatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .stopwatch-container {
+    align-items: flex-start;
+    margin-left: 160px;
+  }
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 200px;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0px 4px 40px rgba(23, 31, 70, 0.16);
+}
+
+@media screen and (min-width: 768px) {
+  .timer-container {
+    width: 310px;
+    padding: 32px;
+  }
+}
+
+.image-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.timer-image-container {
+  display: flex;
+  align-items: center;
+}
+.heading {
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 500;
+}
+.btn {
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+  outline: none;
+}
+.button-container {
+  display: flex;
+}
+.btn-start {
+  background-color: #1db057;
+  margin-right: 20px;
+}
+.btn-stop {
+  background-color: #ef0d36;
+  margin-right: 20px;
+}
+.btn-reset {
+  background-color: #eaa800;
+}
+.stopwatch-timer {
+  color: #333333;
+  font-family: 'Roboto';
+  font-size: 36px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .stopwatch-timer {
+    font-size: 64px;
+  }
+}
