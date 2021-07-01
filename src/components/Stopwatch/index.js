@@ -1,26 +1,32 @@
 import {Component} from 'react'
 import './index.css'
 
-let timerId = 0
-
 class Stopwatch extends Component {
   state = {
     seconds: 0,
   }
 
+  componentWillUnmount() {
+    clearInterval(this.timerId)
+  }
+
   onClickResetButton = () => {
-    clearInterval(timerId)
+    clearInterval(this.timerId)
     this.setState({seconds: 0})
   }
 
+  updateTime = () => {
+    this.setState(prevState => ({
+      seconds: prevState.seconds + 1,
+    }))
+  }
+
   onClickStartButton = () => {
-    timerId = setInterval(() => {
-      this.setState(prevState => ({seconds: prevState.seconds + 1}))
-    }, 1000)
+    this.timerId = setInterval(this.updateTime, 1000)
   }
 
   onClickStopButton = () => {
-    clearInterval(timerId)
+    clearInterval(this.timerId)
   }
 
   renderSeconds = () => {
